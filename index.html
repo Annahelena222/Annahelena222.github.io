@@ -4,8 +4,21 @@
     <meta charset="UTF-8">
     <title>Portfólio - Anna Helena</title>
     <style>
-        /* Estilo Geral */
+        /* Definindo as cores para facilitar */
+        :root {
+            --fundo: #ffffff;
+            --texto: #333333;
+            --roxo: #bc13fe;
+        }
+
+        body.dark {
+            --fundo: #000000;
+            --texto: #bc13fe; /* Texto roxo no modo escuro */
+        }
+
         body {
+            background-color: var(--fundo);
+            color: var(--texto);
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -13,37 +26,25 @@
             transition: 0.3s;
         }
 
-        /* Modo Claro (Padrão) */
-        body.light {
-            background-color: #ffffff;
-            color: #333333;
-        }
-
-        /* Modo Noturno (Preto e Roxo) */
-        body.dark {
-            background-color: #000000;
-            color: #bc13fe; /* Roxo vibrante para o texto */
-        }
-
         .container {
             width: 80%;
             margin: 40px auto;
             padding: 20px;
-            border: 1px solid #ddd;
+            border: 1px solid var(--roxo);
             border-radius: 10px;
         }
 
-        /* Foto */
+        [span_0](start_span)/* Foto Profissional[span_0](end_span) */
         .foto {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             object-fit: cover;
             border-radius: 50%;
-            border: 2px solid #bc13fe;
+            border: 3px solid var(--roxo);
             margin-top: 20px;
         }
 
-        /* Botão de Alternar Modo */
+        /* Botão da Lua */
         .btn-modo {
             position: fixed;
             top: 20px;
@@ -52,16 +53,17 @@
             background: none;
             border: none;
             cursor: pointer;
+            outline: none;
         }
 
         h2 {
-            border-bottom: 1px solid #bc13fe;
-            padding-bottom: 10px;
+            border-bottom: 2px solid var(--roxo);
+            padding-bottom: 5px;
             margin-top: 30px;
         }
 
         a {
-            color: #0077b5;
+            color: var(--roxo);
             text-decoration: none;
             font-weight: bold;
         }
@@ -69,10 +71,6 @@
         ul {
             list-style: none;
             padding: 0;
-        }
-
-        li {
-            margin: 10px 0;
         }
     </style>
 </head>
@@ -84,23 +82,23 @@
         
         <h1>Anna Helena Soares Rocha</h1>
         
-        <img src="Foto.jpg.webp" alt="Minha Foto" class="foto">
+        <img src="foto.jpg.WEBP" alt="Foto de Anna Helena" class="foto">
 
-        [span_3](start_span)<p>Estudante de Ciência da Computação no CEUB[span_3](end_span).</p>
-        [span_4](start_span)<p>Email: anna.helena@sempreceub.com[span_4](end_span)</p>
-        [span_5](start_span)<p><a href="https://www.linkedin.com/in/anna-helena-soares-rocha-8a89433b2?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank">Meu LinkedIn</a>[span_5](end_span)</p>
+        [span_1](start_span)<p>Estudante de Ciência da Computação no CEUB[span_1](end_span).</p>
+        [span_2](start_span)<p>Email: anna.helena@sempreceub.com[span_2](end_span)</p>
+        [span_3](start_span)<p><a href="https://www.linkedin.com/in/anna-helena-soares-rocha-8a89433b2?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank">LinkedIn Profissional[span_3](end_span)</a></p>
 
         <h2>Formação Acadêmica</h2>
-        [span_6](start_span)<p>Ciência da Computação – CEUB (Em andamento)[span_6](end_span)</p>
+        [span_4](start_span)<p>Ciência da Computação – CEUB (Em andamento)[span_4](end_span)</p>
 
         <h2>Projetos Acadêmicos</h2>
-        [span_7](start_span)[span_8](start_span)<p>Atualmente desenvolvendo o <strong>portfolioHUB</strong> (este site) como parte do desafio inicial do curso[span_7](end_span)[span_8](end_span).</p>
+        [span_5](start_span)[span_6](start_span)<p>Desenvolvimento do <strong>portfolioHUB</strong> (este site) utilizando ferramentas GIT/GITHUB[span_5](end_span)[span_6](end_span).</p>
 
         <h2>Habilidades</h2>
         <ul>
-            [span_9](start_span)<li>Organização[span_9](end_span)</li>
-            [span_10](start_span)<li>Aprendizado rápido[span_10](end_span)</li>
-            [span_11](start_span)<li>Lógica básica[span_11](end_span)</li>
+            [span_7](start_span)<li>Organização[span_7](end_span)</li>
+            [span_8](start_span)<li>Aprendizado rápido[span_8](end_span)</li>
+            [span_9](start_span)<li>Lógica básica[span_9](end_span)</li>
         </ul>
 
     </div>
