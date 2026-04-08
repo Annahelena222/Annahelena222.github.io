@@ -29,7 +29,7 @@
             transition: 0.5s;
         }
 
-        /* Botão da Lua em um Quadrado */
+        /* Botão da Lua no Quadrado */
         .btn-alternar {
             position: fixed;
             top: 20px;
@@ -48,105 +48,113 @@
             z-index: 100;
         }
 
-        .btn-alternar:hover {
-            border-color: var(--roxo);
-        }
+        .btn-alternar:hover { border-color: var(--roxo); }
 
         .cartao {
             width: 90%;
-            max-width: 700px;
+            max-width: 750px;
             margin: 80px 0;
-            padding: 40px;
-            border: 1px solid var(--roxo);
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 50px;
+            border-left: 5px solid var(--roxo); /* Detalhe lateral de currículo */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            background-color: var(--fundo);
         }
 
-        h1 { margin: 10px 0; font-size: 32px; letter-spacing: 1px; }
+        header { text-align: left; border-bottom: 2px solid var(--roxo); padding-bottom: 20px; }
         
-        .subtitulo { font-size: 18px; margin-bottom: 20px; color: var(--roxo); font-weight: 500; }
+        h1 { margin: 0; font-size: 36px; text-transform: uppercase; }
+        .subtitulo { font-size: 18px; color: var(--roxo); margin: 5px 0 15px 0; font-weight: 600; }
 
-        .contato { margin-bottom: 30px; font-size: 16px; }
-        .contato a { color: var(--texto); text-decoration: none; font-weight: bold; margin: 0 10px; }
-        .contato a:hover { color: var(--roxo); }
+        .contato { font-size: 14px; line-height: 1.6; }
+        .contato a { color: var(--roxo); text-decoration: none; font-weight: bold; }
 
         h2 { 
-            color: var(--roxo); 
-            margin-top: 40px; 
-            font-size: 20px; 
+            font-size: 18px; 
             text-transform: uppercase; 
-            letter-spacing: 2px;
-            border-bottom: 2px solid var(--roxo);
-            display: inline-block;
+            letter-spacing: 1.5px;
+            margin-top: 40px;
+            color: var(--roxo);
+            border-bottom: 1px solid rgba(142, 68, 173, 0.3);
             padding-bottom: 5px;
         }
         
-        .texto { 
-            margin-top: 20px; 
-            line-height: 1.8; 
-            text-align: center; 
-            font-size: 17px;
-        }
+        .secao-conteudo { margin-top: 15px; font-size: 16px; line-height: 1.7; }
         
-        .habilidades-lista {
+        .item-curriculo { margin-bottom: 20px; }
+        .item-titulo { font-weight: bold; display: block; }
+        .item-sub { font-style: italic; opacity: 0.8; font-size: 14px; }
+
+        .lista-tags {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
+            gap: 10px;
             padding: 0;
             list-style: none;
-            margin-top: 20px;
+            margin-top: 10px;
         }
 
-        .habilidades-lista li {
-            padding: 8px 18px;
-            background: rgba(188, 19, 254, 0.05);
+        .lista-tags li {
+            padding: 5px 15px;
             border: 1px solid var(--roxo);
-            border-radius: 4px;
-            font-size: 15px;
+            border-radius: 3px;
+            font-size: 14px;
         }
     </style>
 </head>
 <body class="light">
 
-    <button class="btn-alternar" onclick="alternarModo()" title="Alternar Modo Escuro">🌙</button>
+    <button class="btn-alternar" onclick="alternarModo()">🌙</button>
 
     <div class="cartao">
-        <h1>Anna Helena Soares Rocha</h1>
-        <p class="subtitulo">Ciência da Computação | CEUB</p>
-        
-        <div class="contato">
-            <a href="mailto:anna.helena@sempreceub.com">anna.helena@sempreceub.com</a> | 
-            <a href="https://www.linkedin.com/in/anna-helena-soares-rocha-8a89433b2?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank">LinkedIn</a>
-        </div>
+        <header>
+            <h1>Anna Helena Soares Rocha</h1>
+            <p class="subtitulo">Ciência da Computação | CEUB</p>
+            <div class="contato">
+                📍 Brasília, DF <br>
+                📧 <a href="mailto:anna.helena@sempreceub.com">anna.helena@sempreceub.com</a> <br>
+                🔗 <a href="https://www.linkedin.com/in/anna-helena-soares-rocha-8a89433b2?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank">LinkedIn</a>
+            </div>
+        </header>
 
         <h2>Biografia Profissional</h2>
-        <p class="texto">
-            Sou estudante de Ciência da Computação no CEUB com interesse na evolução tecnológica. 
+        <div class="secao-conteudo">
+            <p>Sou estudante de Ciência da Computação no CEUB com interesse na evolução tecnológica. 
             Atualmente focada na consolidação de fundamentos de programação e lógica, busco expandir 
-            continuamente minhas competências técnicas. Meu objetivo é aprender e evoluir profissionalmente.
-        </p>
+            continuamente minhas competências técnicas. Meu objetivo é aprender e evoluir profissionalmente.</p>
+        </div>
 
         <h2>Formação Acadêmica</h2>
-        <p class="texto">
-            <strong>Bacharelado em Ciência da Computação</strong><br>
-            CEUB – Centro Universitário de Brasília (Cursando)
-        </p>
+        <div class="secao-conteudo">
+            <div class="item-curriculo">
+                <span class="item-titulo">Bacharelado em Ciência da Computação</span>
+                <span class="item-sub">CEUB – Centro Universitário de Brasília | (Cursando)</span>
+            </div>
+        </div>
 
         <h2>Trajetória e Foco Acadêmico</h2>
-        <p class="texto">
-            Nesta fase da graduação, foco no domínio de fundamentos e na arquitetura lógica de sistemas. 
-        
-        </p>
+        <div class="secao-conteudo">
+            <p>Foco no domínio de fundamentos e na arquitetura lógica de sistemas. Desenvolvimento de 
+            estudos voltados à resolução de problemas e à estruturação de aplicações, priorizando 
+            a organização e as boas práticas.</p>
+        </div>
+
+        <h2>Idiomas</h2>
+        <div class="secao-conteudo">
+            <ul class="lista-tags">
+                <li>Português (Nativo)</li>
+                <li>Inglês (Intermediário)</li>
+            </ul>
+        </div>
 
         <h2>Habilidades</h2>
-        <ul class="habilidades-lista">
-            <li>Lógica de Programação</li>
-            <li>Pensamento Analítico</li>
-            <li>Organização</li>
-            <li>Aprendizado Rápido</li>
-        </ul>
+        <div class="secao-conteudo">
+            <ul class="lista-tags">
+                <li>Lógica de Programação</li>
+                <li>Pensamento Analítico</li>
+                <li>Organização</li>
+                <li>Aprendizado Rápido</li>
+            </ul>
+        </div>
     </div>
 
     <script>
