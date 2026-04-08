@@ -1,163 +1,189 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-  <title>Portfólio - Anna Helena</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortfolioHUB | Anna Helena</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-light: #f4f7f6;
+            --card-light: #ffffff;
+            --text-light: #2d3436;
+            --accent: #0077b5; 
+            --bg-dark: #0f172a;
+            --card-dark: #1e293b;
+            --text-dark: #f1f5f9;
+        }
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      transition: 0.3s;
-      text-align: center;
-    }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: 0.4s;
+            line-height: 1.6;
+        }
 
-    .light {
-      background-color: #f4f4f4;
-      color: #333;
-    }
+        body.light { background: var(--bg-light); color: var(--text-light); }
+        body.dark { background: var(--bg-dark); color: var(--text-dark); }
 
-    .dark {
-      background-color: #121212;
-      color: #f5f5f5;
-    }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
 
-    .container {
-      width: 80%;
-      margin: 40px auto;
-      padding: 20px;
-      border-radius: 10px;
-    }
+        .light .container { background: var(--card-light); }
+        .dark .container { background: var(--card-dark); }
 
-    .light .container {
-      background: white;
-      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    }
+        header { text-align: center; margin-bottom: 50px; }
+        
+        /* Ajuste para Foto .webp */
+        .foto-perfil {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--accent);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
 
-    .dark .container {
-      background: #1e1e1e;
-    }
+        section { margin-bottom: 45px; }
+        h2 { 
+            color: var(--accent); 
+            border-bottom: 2px solid rgba(0,0,0,0.1); 
+            padding-bottom: 10px;
+            font-size: 1.8rem;
+        }
 
-    h1 {
-      margin-bottom: 10px;
-    }
+        .card {
+            padding: 25px;
+            border-radius: 12px;
+            background: rgba(0,0,0,0.03);
+            margin-bottom: 20px;
+            border-left: 5px solid var(--accent);
+            transition: transform 0.3s;
+        }
+        .card:hover { transform: translateX(10px); }
 
-    h2 {
-      margin-top: 20px;
-      border-bottom: 2px solid gray;
-      padding-bottom: 5px;
-    }
+        .dark .card { background: rgba(255,255,255,0.05); }
 
-    ul {
-      list-style: none;
-      padding: 0;
-    }
+        .btn-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: var(--accent);
+            color: white !important;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+        .btn-link:hover { opacity: 0.8; }
 
-    li {
-      margin: 5px;
-      padding: 10px;
-      border-radius: 5px;
-      background: #ddd;
-    }
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            background: var(--accent);
+            color: white;
+            font-size: 20px;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
 
-    .dark li {
-      background: #333;
-    }
-
-    a {
-      color: #0077b5;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    /* BOTÃO BONITO */
-    button {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      padding: 12px 15px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      background-color: #333;
-      color: white;
-      font-size: 16px;
-      z-index: 1000;
-    }
-
-    button:hover {
-      background-color: #555;
-    }
-
-    /* FOTO AJUSTADA */
-    .foto {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-top: 10px;
-    }
-
-  </style>
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        .skill-item {
+            background: var(--accent);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+    </style>
 </head>
-
 <body class="light">
 
-<button onclick="toggleMode()">🌙</button>
+    <button class="theme-toggle" onclick="toggleMode()">🌓</button>
 
-<div class="container">
+    <div class="container">
+        <header>
+            <img src="Foto.jpg.webp" alt="Anna Helena Soares Rocha" class="foto-perfil">
+            <h1>Anna Helena Soares Rocha</h1>
+            <p style="font-size: 1.2rem; font-weight: 300;">Ciência da Computação | CEUB</p>
+            <p>Brasília, DF • <a href="mailto:anna.helena@sempreceub.com">anna.helena@sempreceub.com</a></p>
+            <p><a href="https://www.linkedin.com/in/anna-helena-soares-rocha-8a89433b2?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="btn-link">Conectar no LinkedIn</a></p>
+        </header>
 
-  <h1>Anna Helena Soares Rocha</h1>
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Estudante dedicada de Ciência da Computação, apaixonada por tecnologia e inovação. [span_7](start_span)[span_8](start_span)Busco aplicar meus conhecimentos em lógica de programação e desenvolvimento para criar soluções que impactem positivamente a sociedade.[span_7](end_span)[span_8](end_span)</p>
+        </section>
 
-  <img src="Foto.jpg" alt="Minha foto" class="foto">
+        <section id="formacao">
+            <h2>Formação Acadêmica</h2>
+            <div class="card">
+                <h3>Bacharelado em Ciência da Computação</h3>
+                <p><strong>CEUB - Centro Universitário de Brasília</strong></p>
+                [span_9](start_span)<p>2024 - Atualmente (Em andamento)[span_9](end_span)</p>
+            </div>
+        </section>
 
-  <h2>Sobre mim</h2>
-  <p>Sou estudante de Ciência da Computação no CEUB e tenho interesse na área de tecnologia. Ao longo do curso, venho desenvolvendo minhas habilidades em programação e lógica.</p>
+        <section id="projetos">
+            <h2>Projetos Acadêmicos</h2>
+            <div class="card">
+                <h3>portfolioHUB</h3>
+                [span_10](start_span)[span_11](start_span)<p>Desenvolvimento de um portfólio digital profissional utilizando as ferramentas GIT e GITHUB, focado em apresentar trajetórias acadêmicas de forma organizada.[span_10](end_span)[span_11](end_span)</p>
+                <a href="#" class="btn-link">Ver Repositório GitHub</a>
+            </div>
+        </section>
 
-  <h2>Formação</h2>
-  <p>Ciência da Computação – CEUB (em andamento)</p>
+        <section id="habilidades">
+            <h2>Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Lógica</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">HTML/CSS</div>
+                <div class="skill-item">Git/GitHub</div>
+                <div class="skill-item">Organização</div>
+                <div class="skill-item">Análise</div>
+            </div>
+        </section>
 
-  <h2>Habilidades</h2>
-  <ul>
-    <li>Lógica de programação</li>
-    <li>Pensamento analítico</li>
-    <li>Organização</li>
-    <li>Aprendizado rápido</li>
-  </ul>
+        <section id="recomendacoes">
+            <h2>Recomendações e Testemunhos</h2>
+            <div class="card">
+                [span_12](start_span)<p><em>"Anna demonstra uma facilidade impressionante para resolver problemas lógicos complexos e sempre entrega seus projetos com alto nível de organização."</em>[span_12](end_span)</p>
+                <p style="text-align: right;"><strong>— Referência Acadêmica</strong></p>
+            </div>
+        </section>
+    </div>
 
-  <h2>Projetos</h2>
-  <p>Atividades e exercícios desenvolvidos durante o curso.</p>
+    <script>
+        function toggleMode() {
+            const body = document.body;
+            body.classList.toggle("dark");
+            body.classList.toggle("light");
+            localStorage.setItem("portfolio-theme", body.classList.contains("dark") ? "dark" : "light");
+        }
 
-  <h2>Contato</h2>
-  <p>Email: anna.helena@sempreceub.com</p>
-  <p>
-    <a href="https://www.linkedin.com/in/anna-helena-soares-rocha-8a89433b2">
-      Meu LinkedIn
-    </a>
-  </p>
-
-</div>
-
-<script>
-function toggleMode() {
-    const body = document.body;
-    body.classList.toggle("dark");
-    body.classList.toggle("light");
-
-    if (body.classList.contains("dark")) {
-        localStorage.setItem("mode", "dark");
-    } else {
-        localStorage.setItem("mode", "light");
-    }
-}
-
-window.onload = function() {
-    const savedMode = localStorage.getItem("mode");
-    if (savedMode) {
-        document.body.className = savedMode;
-    }
-}
-</script>
-
+        window.onload = function() {
+            const savedTheme = localStorage.getItem("portfolio-theme") || "light";
+            document.body.className = savedTheme;
+        }
+    </script>
 </body>
 </html>
