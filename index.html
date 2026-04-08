@@ -4,23 +4,22 @@
     <meta charset="UTF-8">
     <title>portfolioHUB - Anna Helena</title>
     <style>
-        /* Cores fixas para evitar bugs de tradução */
         :root {
             --fundo: #ffffff;
             --texto: #2d3436;
-            --detalhe: #8e44ad;
+            --roxo: #8e44ad;
         }
 
         body.dark {
             --fundo: #000000;
             --texto: #ffffff;
-            --detalhe: #bc13fe;
+            --roxo: #bc13fe;
         }
 
         body {
             background-color: var(--fundo);
             color: var(--texto);
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             display: flex;
             flex-direction: column;
@@ -28,7 +27,6 @@
             transition: 0.5s;
         }
 
-        /* Botão de Lua Flutuante */
         .bt-lua {
             position: fixed;
             top: 20px;
@@ -40,71 +38,115 @@
             z-index: 100;
         }
 
-        .cartao-principal {
+        .cartao {
             width: 90%;
-            max-width: 600px;
-            margin-top: 60px;
+            max-width: 650px;
+            margin: 60px 0;
             padding: 40px;
-            border: 2px solid var(--detalhe);
+            border: 2px solid var(--roxo);
             border-radius: 20px;
-            box-shadow: 0 10px 20px rgba(188, 19, 254, 0.2);
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(188, 19, 254, 0.15);
         }
 
         .minha-foto {
             width: 180px;
             height: 180px;
             border-radius: 50%;
-            border: 4px solid var(--detalhe);
+            border: 4px solid var(--roxo);
             object-fit: cover;
             margin-bottom: 20px;
         }
 
-        h1 { margin: 10px 0; font-size: 28px; }
-        h2 { color: var(--detalhe); margin-top: 30px; font-size: 22px; text-transform: uppercase; letter-spacing: 2px; }
+        h1 { margin: 10px 0; font-size: 26px; }
         
-        .info-pessoal { margin-bottom: 30px; line-height: 1.8; }
+        h2 { 
+            color: var(--roxo); 
+            margin-top: 35px; 
+            font-size: 18px; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            border-bottom: 2px solid var(--roxo);
+            display: inline-block;
+            padding-bottom: 3px;
+        }
         
-        .lista-simples {
-            list-style: none;
+        .texto { 
+            margin-top: 15px; 
+            line-height: 1.7; 
+            text-align: justify; 
+            font-size: 16px;
+        }
+        
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
             padding: 0;
-            font-size: 18px;
+            list-style: none;
+            margin-top: 20px;
         }
 
-        .lista-simples li {
-            margin: 10px 0;
-            padding: 10px;
+        .tags li {
+            padding: 8px 16px;
             background: rgba(188, 19, 254, 0.1);
-            border-radius: 8px;
+            border: 1px solid var(--roxo);
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
         }
 
-        a { color: var(--detalhe); text-decoration: none; font-weight: bold; border-bottom: 1px solid; }
+        .contato a { 
+            color: var(--roxo); 
+            text-decoration: none; 
+            font-weight: bold; 
+            margin: 0 10px;
+        }
+
+        .contato a:hover { border-bottom: 1px solid var(--roxo); }
     </style>
 </head>
 <body class="light">
 
     <button class="bt-lua" onclick="mudar()">🌙</button>
 
-    <div class="cartao-principal">
-        <img src="foto.jpg.WEBP" alt="Anna Helena" class="minha-foto">
+    <div class="cartao">
+        <img src="temp_image_A57303AC-F195-4772-8875-80EF1FA70EDB.webp" alt="Anna Helena Soares Rocha" class="minha-foto">
         
-        <div class="info-pessoal">
-            <h1>Anna Helena Soares Rocha</h1>
-            <p>Estudante de Ciência da Computação - CEUB</p>
-            <p>📧 anna.helena@sempreceub.com</p>
-            <a href="https://www.linkedin.com/in/anna-helena-soares-rocha-8a89433b2?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank">LinkedIn Profissional</a>
+        <h1>Anna Helena Soares Rocha</h1>
+        <p style="font-style: italic; opacity: 0.8;">Ciência da Computação | CEUB</p>
+        
+        <div class="contato">
+            <a href="mailto:anna.helena@sempreceub.com">E-mail</a> | 
+            <a href="https://www.linkedin.com/in/anna-helena-soares-rocha-8a89433b2?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank">LinkedIn</a>
         </div>
 
-        <h2>Formação</h2>
-        <p>Ciência da Computação (Cursando)</p>
+        <h2>Biografia Profissional</h2>
+        <p class="texto">
+            Sou estudante de Ciência da Computação no CEUB com profundo interesse na evolução tecnológica e no impacto das soluções de software. 
+            Atualmente foca na consolidação de fundamentos de programação e lógica, busco expandir continuamente minhas competências técnicas. 
+            Meu objetivo é aplicar rigor analítico e criatividade para contribuir em projetos inovadores no mercado de tecnologia.
+        </p>
 
-        <h2>Projeto Atual</h2>
-        <p>Desenvolvimento do meu <strong>portfolioHUB</strong>.</p>
+        <h2>Formação Acadêmica</h2>
+        <p class="texto" style="text-align: center;">
+            <strong>Bacharelado em Ciência da Computação</strong><br>
+            CEUB – Centro Universitário de Brasília (2024 – Presente)
+        </p>
 
-        <h2>Habilidades</h2>
-        <ul class="lista-simples">
-            <li>✓ Organização de Processos</li>
-            <li>✓ Aprendizado Adaptativo</li>
-            <li>✓ Lógica de Pensamento</li>
+        <h2>Trajetória e Foco Acadêmico</h2>
+        <p class="texto">
+            Nesta fase da graduação, foco no domínio de algoritmos e na arquitetura lógica de sistemas. Desenvolvo projetos práticos de laboratório voltados à resolução de problemas e à estruturação de aplicações modernas, priorizando a organização de código e as boas práticas de desenvolvimento.
+        </p>
+
+        <h2>Habilidades & Competências</h2>
+        <ul class="tags">
+            <li>Lógica de Programação</li>
+            <li>Pensamento Analítico</li>
+            <li>Organização de Sistemas</li>
+            <li>Aprendizado Adaptativo</li>
+            <li>Comunicação Eficiente</li>
         </ul>
     </div>
 
