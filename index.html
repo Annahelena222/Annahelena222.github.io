@@ -1,61 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Portfólio - Anna Helena Soares Rocha</title>
+  <title>Portfólio - Anna Helena</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            transition: 0.3s;
-        }
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: 0.3s;
+      text-align: center;
+    }
 
-        .light {
-            background-color: #f5f5f5;
-            color: #333;
-        }
+    .light {
+      background-color: #f4f4f4;
+      color: #333;
+    }
 
-        .dark {
-            background-color: #121212;
-            color: #f5f5f5;
-        }
+    .dark {
+      background-color: #121212;
+      color: #f5f5f5;
+    }
 
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            margin-top: 40px;
-            border-radius: 10px;
-        }
+    .container {
+      width: 80%;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 10px;
+    }
 
-        .light .container {
-            background: white;
-        }
+    .light .container {
+      background: white;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    }
 
-        .dark .container {
-            background: #1e1e1e;
-        }
+    .dark .container {
+      background: #1e1e1e;
+    }
 
-        h1 {
-            text-align: center;
-        }
+    h1 {
+      margin-bottom: 10px;
+    }
 
-        h2 {
-            border-bottom: 2px solid gray;
-            padding-bottom: 5px;
-        }
+    h2 {
+      margin-top: 20px;
+      border-bottom: 2px solid gray;
+      padding-bottom: 5px;
+    }
 
-        button {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 10px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-    </style>
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 5px;
+      padding: 10px;
+      border-radius: 5px;
+      background: #ddd;
+    }
+
+    .dark li {
+      background: #333;
+    }
+
+    a {
+      color: #0077b5;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* BOTÃO BONITO */
+    button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 12px 15px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: #333;
+      color: white;
+      font-size: 16px;
+      z-index: 1000;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    /* FOTO AJUSTADA */
+    .foto {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-top: 10px;
+    }
+
+  </style>
 </head>
 
 <body class="light">
@@ -64,30 +107,34 @@
 
 <div class="container">
 
-<h1>Anna Helena</h1>
+  <h1>Anna Helena Soares Rocha</h1>
 
-<img src="Foto.jpg" alt="Minha foto" width="150" style="border-radius: 50%;">
+  <img src="Foto.jpg" alt="Minha foto" class="foto">
 
-<h2>Sobre mim</h2>
-<p>Sou estudante de Ciência da Computação no CEUB, primeiro semestre. Estou desenvolvendo minhas habilidades em programação e lógica.Busco me aprimorar e evoluir cada dia mais na área que escolhi.</p>
+  <h2>Sobre mim</h2>
+  <p>Sou estudante de Ciência da Computação no CEUB e tenho interesse na área de tecnologia. Ao longo do curso, venho desenvolvendo minhas habilidades em programação e lógica.</p>
 
-<h2>Contato</h2>
-<p>Email: anna.helena@sempreceub.com</p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/anna-helena-soares-rocha-8a89433b2">Meu LinkedIn</a></p>
-    
-<h2>Formação</h2>
-<p>Ciência da Computação – CEUB (em andamento)</p>
+  <h2>Formação</h2>
+  <p>Ciência da Computação – CEUB (em andamento)</p>
 
-<h2>Habilidades</h2>
-<ul>
-<li>Lógica de programação</li>
-<li>Pensamento analítico</li>
-<li>Organização</li>
-<li>Aprendizado rápido</li>
-</ul>
+  <h2>Habilidades</h2>
+  <ul>
+    <li>Lógica de programação</li>
+    <li>Pensamento analítico</li>
+    <li>Organização</li>
+    <li>Aprendizado rápido</li>
+  </ul>
 
-<h2>Projetos</h2>
-<p>Atividades desenvolvidas durante o curso.</p>
+  <h2>Projetos</h2>
+  <p>Atividades e exercícios desenvolvidos durante o curso.</p>
+
+  <h2>Contato</h2>
+  <p>Email: anna.helena@sempreceub.com</p>
+  <p>
+    <a href="https://www.linkedin.com/in/anna-helena-soares-rocha-8a89433b2">
+      Meu LinkedIn
+    </a>
+  </p>
 
 </div>
 
